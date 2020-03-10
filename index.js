@@ -2,6 +2,8 @@ let form = document.getElementById("form");
 // !! This is the input that represents a phone number input in the html
 let input = document.getElementById("phone_input");
 let validatedPhone = document.getElementById("validatedPhone");
+let check = document.getElementById("iconGood");
+let ex = document.getElementById("iconBad");
 
 // !! listents for the form to submit and than takes whatever content is in that input, which at this point can be anything
 form.addEventListener("submit", e => {
@@ -13,5 +15,13 @@ form.addEventListener("submit", e => {
   let phoneAfterValidation = phoneValidation(phoneBeforeValidation);
   console.log("phoneAfterValidation", phoneAfterValidation);
   validatedPhone.innerHTML = phoneAfterValidation;
+  if (phoneAfterValidation.length === 10) {
+    check.classList.add("displayToggle");
+    ex.classList.remove("displayToggle");
+  } else {
+    ex.classList.add("displayToggle");
+    check.classList.remove("displayToggle");
+  }
+
   console.log(input.textContent);
 });

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>validate phone number</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Validate Phone Number</title>
 </head>
 
 <body>
@@ -15,6 +17,9 @@
             <input type="text" id="phone_input" default="phone goes here">
             <input type="submit" value="submit">
         </form>
+        <i id="iconGood" class="fa fa-check" aria-hidden="true"></i>
+        <i id="iconBad" class="fa fa-times" aria-hidden="true"></i>
+
         <p id="validatedPhone"></p>
     </div>
     <style>
@@ -22,6 +27,25 @@
             max-width: min(400px, 80%);
             margin: auto;
             text-align: center;
+        }
+
+        .displayToggle {
+            display: block !important
+        }
+
+        i {
+            margin: 15px;
+            display: none;
+        }
+
+        #iconGood {
+            color: green;
+            display: none;
+        }
+
+        #iconBad {
+            color: red;
+            display: none;
         }
     </style>
     <script src="phoneValidation.js"></script>
