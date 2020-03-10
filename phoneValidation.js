@@ -16,6 +16,6 @@ const phoneValidation = phone => {
     phoneAsString = "414" + phoneAsString;
     return phoneAsString;
   } else {
-    alert("please enter a valid phone number");
+    return "That isn't a valid phone number";
   }
 };

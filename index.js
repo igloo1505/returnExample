@@ -13,6 +13,5 @@ form.addEventListener("submit", e => {
   let phoneAfterValidation = phoneValidation(phoneBeforeValidation);
   console.log("phoneAfterValidation", phoneAfterValidation);
   validatedPhone.innerHTML = phoneAfterValidation;
-
   console.log(input.textContent);
 });
